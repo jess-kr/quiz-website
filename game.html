@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="start.html">Restart</a>
+            <a href="player.html">Change Player </a>
+            <a id="dark-mode-toggle"></a>
+        </nav>
+    </header>
+    <div class="headRow">
+        <div class="headRow-item">
+            <p>Lives: </p>
+            <p id="lives">3</p>
+        </div>
+        <div class="headRow-item">
+            <p>Score: </p>
+            <p id="score">0</p>
+        </div>
+
+        <div class="headRow-item">
+            <p>Category: </p>
+            <p id="category">None</p>
+        </div>
+        <div class="headRow-item">
+            <div class="playerDisplay">
+                <p> Player: </p>
+                <img id="player-img" src="" alt="your current player">
+                <p id="player">None</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="progressBarWrapper">
+        <div id="progressBar">
+            <div id="progressFill"></div>
+        </div>
+    </div>
+
+    <div id="quiz"></div>
+    </div>
+
+    </div>
+    <footer class="site-footer">
+        Issues? Report them via my GitHub-Website!
+        <a href="https://jess-kr.github.io/website/#contact"><button>Report</button></a>
+    </footer>
+    </div>
+    <script src="game.js"></script>
+    <script src="darkmode.js"></script>
+
+</body>
+
+</html>

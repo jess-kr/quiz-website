@@ -1,0 +1,337 @@
+/* Variables for maintainablity */
+:root {
+    --blue: #2325a0;
+    --terracotta: #8d4c2e;
+    --light-gray: #c4bfb7;
+    --cyan: #80ffd4;
+
+    --text: #252422;
+    --text-light: #fcf8f0;
+    --text-dark: #252422;
+
+    --fancy-font: "Copperplate Gothic";
+    --font-sans: "Arial";
+    --background: url("media/background_light.png");
+
+    --nav-h: 68px;
+    --section-padding: 100px;
+    --small-padding: 30px;
+}
+
+
+ul {
+    position: relative;
+    anchor-name: --player-carousel;
+    width: 100vw;
+    height: calc(100vh - (var(--nav-h)) - (4* var(--small-padding)));
+    padding: var(--section-padding);
+    display: flex;
+    align-self: flex-start;
+    gap: 4vw;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-marker-group: after;
+
+}
+
+ul::scroll-marker-group {
+    height: calc(anchor(top) - (var(--nav-h)));
+    position: absolute;
+    position-anchor: --player-carousel;
+    bottom: calc(anchor(top) - var(--nav-h));
+    translate: 0 -100%;
+    justify-self: anchor-center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+ul::scroll-button(*) {
+    border: 0;
+    font-size: 2rem;
+    background: none;
+    color: var(--text);
+    opacity: 0.7;
+    cursor: pointer;
+    position: absolute;
+    position-anchor: --player-carousel;
+}
+
+ul::scroll-button(*):hover,
+ul::scroll-button(*):focus {
+    opacity: 1;
+}
+
+ul::scroll-button(*):active {
+    translate: 1px 1px;
+}
+
+ul::scroll-button(*):disabled {
+    opacity: 0.2;
+    cursor: unset;
+}
+
+ul::scroll-button(left) {
+    content: "◄" / "Previous";
+    right: calc(anchor(left) - 70px);
+    bottom: calc(anchor(top) - var(--nav-h));
+
+}
+
+ul::scroll-button(right) {
+    content: "►" / "Next";
+    left: calc(anchor(right) - 70px);
+    bottom: calc(anchor(top) - var(--nav-h));
+
+}
+
+li {
+    position: relative;
+    position-anchor: --player-carousel;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    list-style-type: none;
+    background-color: var(--light-gray);
+    color: var(--text-dark);
+    border: 1px solid #dddddd;
+    border-radius: 40px;
+    padding: 20px;
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    align-items: center;
+}
+
+li img {
+    margin: calc((var(--small-padding))/2);
+    max-height: 40%;
+    width: auto;
+    border-radius: 40px;
+
+}
+
+li h2 {
+    position: sticky;
+    color: var(--text-dark);
+    font-size: 3rem;
+}
+
+
+li::scroll-marker {
+    content: attr(data-accName);
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+    text-indent: 16px;
+}
+
+li::scroll-marker:target-current {
+    background-color: var(--text);
+}
+
+footer {
+    position: absolute;
+}
+
+@media screen and (max-width: 768px) {
+
+    :root {
+        --section-padding: 50px;
+        --small-padding: 15px;
+    }
+
+    ul {
+        height: calc(100vh - (var(--nav-h)) - (4* var(--small-padding)));
+        padding: calc(3* var(--small-padding));
+        margin-top: var(--small-padding);
+        gap: 2vw;
+    }
+
+    ul::scroll-marker-group {
+        position: absolute;
+        bottom: calc(anchor(top) - var(--nav-h) + var(--small-padding));
+        gap: 0.7vw;
+    }
+
+    ul::scroll-button(*) {
+        position: absolute;
+        top: calc(anchor(top) - var(--nav-h) + var(--small-padding));
+    }
+
+    li {
+        padding: var(--small-padding);
+        flex: 0 0 100%;
+        scroll-snap-align: center;
+        align-items: center;
+    }
+
+    li h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  :root {
+    --small-padding: 16px;
+  }
+
+  ul {
+    height: calc(100vh - var(--nav-h));
+    padding: var(--small-padding);
+  }
+
+  li img {
+    margin: calc(var(--small-padding) / 2);
+  }
+
+  li h2 {
+    font-size: 1.2rem;
+  }
+
+  ul::scroll-marker-group {
+    gap: 10px;
+  }
+
+  ul::scroll-button(left) {
+    right: calc(anchor(left) - 45px);
+    bottom: calc(anchor(top) - var(--nav-h) + var(--small-padding));
+  }
+
+  ul::scroll-button(right) {
+    left: calc(anchor(right) - 45px);
+    bottom: calc(anchor(top) - var(--nav-h) + var(--small-padding));
+  }
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+        --section-padding: 40px;
+        --small-padding: 10px;
+    }
+
+    ul {
+        margin-top: var(--section-padding);
+        height: calc(100vh - (var(--nav-h)) - (2* var(--section-padding)));
+    }
+
+    ul::scroll-marker-group {
+        position: absolute;
+        bottom: calc(anchor(top) - var(--nav-h) + var(--section-padding));
+        gap: 0.7vw;
+    }
+
+    ul::scroll-button(*) {
+        display: none;
+    }
+
+    li h2 {
+        font-size: 1.5rem;
+    }
+
+    ul::scroll-button(left) {
+        right: calc(anchor(left) - 45px);
+    }
+
+    ul::scroll-button(right) {
+        left: calc(anchor(right) - 45px);
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-height: 600px) {
+  :root {
+    --small-padding: 16px;
+    --section-padding: 40px;
+  }
+
+  ul {
+    height: calc(100vh - var(--nav-h));
+    padding: var(--section-padding);
+    align-items: center;
+  }
+
+  li {
+    flex-direction: row;       
+    gap: var(--small-padding);
+    padding: var(--small-padding);
+  }
+
+  li img {
+    width: auto;
+    height: 70%;                
+    max-height: 200px;
+  }
+
+  li h2 {
+    font-size: 1.8rem;
+    position: static;           
+  }
+}
+
+@media screen and (max-height: 400px) {
+  li h2 {
+    position: static;
+  }
+
+}
+
+@media screen and (min-width: 769px) and (max-height: 600px) {
+  :root {
+    --small-padding: 20px;
+    --section-padding: 60px;
+  }
+
+  ul {
+    height: calc(100vh - var(--nav-h));
+    padding: var(--section-padding);
+    align-items: center;
+  }
+
+  li {
+    flex-direction: row;
+    gap: var(--small-padding);
+    padding: var(--small-padding);
+  }
+
+  li img {
+    width: auto;
+    height: 55vh;
+    max-height: 200px;
+  }
+
+  li h2 {
+    font-size: 1.5rem;
+    position: static;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  :root {
+    --small-padding: 10px;
+    --section-padding: 20px;
+  }
+
+  li img {
+    width: 70vw;
+    height: auto;
+  }
+
+  li h2 {
+    font-size: 1.2rem;
+  }
+
+  ul {
+    height: calc(100vh - var(--nav-h) - 6* var(--section-padding));
+    margin-top: calc( 2* var(--section-padding));
+    padding: var(--small-padding);
+  }
+
+  ul::scroll-marker-group {
+        position: absolute;
+        bottom: calc(anchor(top) - var(--nav-h) + calc(2* var(--section-padding)));
+        gap: 0.7vw;
+    }
+}

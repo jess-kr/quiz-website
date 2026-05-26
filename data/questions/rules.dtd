@@ -1,0 +1,27 @@
+<!DOCTYPE questions[
+
+<!ELEMENT quiz (question+)>
+        <!ATTLIST quiz
+                title CDATA #REQUIRED
+                >
+ <!ELEMENT category (question+)>
+        <!ATTLIST category
+                name CDATA #REQUIRED
+                >
+        <!ELEMENT question (text, answers, points)>
+        <!ATTLIST question
+                id ID #REQUIRED
+                >
+
+        <!ELEMENT text (#PCDATA)>
+
+        <!ELEMENT answers (answer+)>
+
+        <!ELEMENT answer (#PCDATA)>
+        <!ATTLIST answer
+                id   (a|b|c|d) #REQUIRED
+                correct (yes|no) #REQUIRED
+                >
+
+        <!ELEMENT points (#PCDATA)>
+]

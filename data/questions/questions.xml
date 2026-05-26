@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quiz SYSTEM "rules.dtd">
+
+<quiz title="The Grand Pub Quiz">
+<category name = "General Knowledge">
+    <question id="q1">
+        <text>Which planet in our solar system has the most moons?</text>
+        <answers>
+            <answer id="a" correct="no">Jupiter</answer>
+            <answer id="b" correct="yes">Saturn</answer>
+            <answer id="c" correct="no">Uranus</answer>
+            <answer id="d" correct="no">Neptune</answer>
+        </answers>
+        <points>1</points>
+    </question>
+
+    <question id="q2">
+        <text>In which year did the Berlin Wall fall?</text>
+        <answers>
+            <answer id="a" correct="no">1987</answer>
+            <answer id="b" correct="no">1991</answer>
+            <answer id="c" correct="yes">1989</answer>
+            <answer id="d" correct="no">1993</answer>
+        </answers>
+        <points>2</points>
+    </question>
+
+    <question id="q3">
+        <text>What is the chemical symbol for gold?</text>
+        <answers>
+            <answer id="a" correct="no">Go</answer>
+            <answer id="b" correct="no">Gd</answer>
+            <answer id="c" correct="no">Gl</answer>
+            <answer id="d" correct="yes">Au</answer>
+        </answers>
+        <points>1</points>
+    </question>
+
+    <question id="q4">
+        <text>Which author wrote the novel "Moby-Dick"?</text>
+        <answers>
+            <answer id="a" correct="no">Ernest Hemingway</answer>
+            <answer id="b" correct="no">Mark Twain</answer>
+            <answer id="c" correct="yes">Herman Melville</answer>
+            <answer id="d" correct="no">Nathaniel Hawthorne</answer>
+        </answers>
+        <points>2</points>
+    </question>
+
+    <question id="q5">
+        <text>How many strings does a standard guitar have?</text>
+        <answers>
+            <answer id="a" correct="no">4</answer>
+            <answer id="b" correct="no">5</answer>
+            <answer id="c" correct="yes">6</answer>
+            <answer id="d" correct="no">7</answer>
+        </answers>
+        <points>1</points>
+    </question>
+
+    <question id="q6">
+        <text>What is the maximum score possible in a single game of ten-pin bowling?</text>
+        <answers>
+            <answer id="a" correct="no">270</answer>
+            <answer id="b" correct="no">290</answer>
+            <answer id="c" correct="yes">300</answer>
+            <answer id="d" correct="no">310</answer>
+        </answers>
+        <points>1</points>
+    </question>
+
+    <question id="q7">
+        <text>What is the longest river in the world?</text>
+        <answers>
+            <answer id="a" correct="no">Amazon</answer>
+            <answer id="b" correct="yes">Nile</answer>
+            <answer id="c" correct="no">Yangtze</answer>
+            <answer id="d" correct="no">Mississippi</answer>
+        </answers>
+        <points>1</points>
+    </question>
+
+    <question id="q8">
+        <text>How many sides does a regular hexagon have?</text>
+        <answers>
+            <answer id="a" correct="no">5</answer>
+            <answer id="b" correct="yes">6</answer>
+            <answer id="c" correct="no">7</answer>
+            <answer id="d" correct="no">8</answer>
+        </answers>
+        <points>1</points>
+    </question>
+
+    <question id="q9">
+        <text>Which country is home to the kangaroo?</text>
+        <answers>
+            <answer id="a" correct="no">New Zealand</answer>
+            <answer id="b" correct="no">South Africa</answer>
+            <answer id="c" correct="yes">Australia</answer>
+            <answer id="d" correct="no">Brazil</answer>
+        </answers>
+        <points>1</points>
+    </question>
+
+    <question id="q10">
+        <text>What does "HTTP" stand for in a web address?</text>
+        <answers>
+            <answer id="a" correct="no">Hyper Text Transfer Program</answer>
+            <answer id="b" correct="yes">Hyper Text Transfer Protocol</answer>
+            <answer id="c" correct="no">High Transfer Text Protocol</answer>
+            <answer id="d" correct="no">Hyper Text Transmission Protocol</answer>
+        </answers>
+        <points>2</points>
+    </question>
+
+    <question id="q11">
+        <text>In which country was the game of chess invented?</text>
+        <answers>
+            <answer id="a" correct="no">China</answer>
+            <answer id="b" correct="no">Persia</answer>
+            <answer id="c" correct="yes">India</answer>
+            <answer id="d" correct="no">Greece</answer>
+        </answers>
+        <points>2</points>
+    </question>
+
+</category>
+
+
+<category name = "Movies">
+    <question id="q12">
+        <text>Which film won the first ever Academy Award for Best Picture in 1928?</text>
+        <answers>
+            <answer id="a" correct="no">The Jazz Singer</answer>
+            <answer id="b" correct="yes">Wings</answer>
+            <answer id="c" correct="no">Sunrise</answer>
+            <answer id="d" correct="no">The Kid</answer>
+        </answers>
+        <points>3</points>
+    </question>
+
+    <question id="q13">
+        <text>In the movie "The Matrix" (1999), what color is the pill Neo takes to learn the truth?</text>
+        <answers>
+            <answer id="a" correct="no">Blue</answer>
+            <answer id="b" correct="no">White</answer>
+            <answer id="c" correct="yes">Red</answer>
+            <answer id="d" correct="no">Green</answer>
+        </answers>
+        <points>1</points>
+    </question>
+
+    <question id="q14">
+        <text>Who directed the 1993 film "Schindler's List"?</text>
+        <answers>
+            <answer id="a" correct="no">Martin Scorsese</answer>
+            <answer id="b" correct="no">Francis Ford Coppola</answer>
+            <answer id="c" correct="no">Stanley Kubrick</answer>
+            <answer id="d" correct="yes">Steven Spielberg</answer>
+        </answers>
+        <points>1</points>
+    </question>
+
+    <question id="q15">
+        <text>Which actor played Iron Man in the Marvel Cinematic Universe?</text>
+        <answers>
+            <answer id="a" correct="no">Chris Evans</answer>
+            <answer id="b" correct="no">Chris Hemsworth</answer>
+            <answer id="c" correct="yes">Robert Downey Jr.</answer>
+            <answer id="d" correct="no">Mark Ruffalo</answer>
+        </answers>
+        <points>1</points>
+    </question>
+
+    <question id="q16">
+        <text>In which fictional city does the Batman franchise primarily take place?</text>
+        <answers>
+            <answer id="a" correct="no">Metropolis</answer>
+            <answer id="b" correct="no">Star City</answer>
+            <answer id="c" correct="no">Central City</answer>
+            <answer id="d" correct="yes">Gotham City</answer>
+        </answers>
+        <points>1</points>
+    </question>
+
+    <question id="q17">
+        <text>Which movie features the quote: "You can't handle the truth!"?</text>
+        <answers>
+            <answer id="a" correct="no">The Shawshank Redemption</answer>
+            <answer id="b" correct="yes">A Few Good Men</answer>
+            <answer id="c" correct="no">Philadelphia</answer>
+            <answer id="d" correct="no">The Firm</answer>
+        </answers>
+        <points>2</points>
+    </question>
+
+    <question id="q18">
+        <text>On what planet does Luke Skywalker meet Obi Wan?</text>
+        <answers>
+            <answer id="a" correct="no">Coruscant</answer>
+            <answer id="b" correct="yes">Tattooine</answer>
+            <answer id="c" correct="no">Lolth</answer>
+            <answer id="d" correct="no">Naboo</answer>
+        </answers>
+        <points>1</points>
+    </question>
+
+    <question id="q19">
+        <text>Which animated film features a character named Simba?</text>
+        <answers>
+            <answer id="a" correct="no">Bambi</answer>
+            <answer id="b" correct="no">The Jungle Book</answer>
+            <answer id="c" correct="no">Tarzan</answer>
+            <answer id="d" correct="yes">The Lion King</answer>
+        </answers>
+        <points>1</points>
+    </question>
+</category>
+
+
+<category name = "Gaming">
+    <question id="q20">
+        <text>In which video game franchise does the player character collect Power Stars and rescue Princess Peach?</text>
+        <answers>
+            <answer id="a" correct="no">The Legend of Zelda</answer>
+            <answer id="b" correct="yes">Super Mario</answer>
+            <answer id="c" correct="no">Kirby</answer>
+            <answer id="d" correct="no">Donkey Kong</answer>
+        </answers>
+        <points>1</points>
+    </question>
+
+    <question id="q21">
+        <text>What is the best-selling video game of all time (as a single release, not a franchise)?</text>
+        <answers>
+            <answer id="a" correct="no">Tetris</answer>
+            <answer id="b" correct="no">GTA V</answer>
+            <answer id="c" correct="yes">Minecraft</answer>
+            <answer id="d" correct="no">Wii Sports</answer>
+        </answers>
+        <points>2</points>
+    </question>
+
+    <question id="q22">
+        <text>In "The Legend of Zelda" series, what is the name of the main antagonist?</text>
+        <answers>
+            <answer id="a" correct="no">Bowser</answer>
+            <answer id="b" correct="no">Sephiroth</answer>
+            <answer id="c" correct="no">Ridley</answer>
+            <answer id="d" correct="yes">Ganondorf</answer>
+        </answers>
+        <points>1</points>
+    </question>
+
+    <question id="q23">
+        <text>Which company developed the "Dark Souls" series?</text>
+        <answers>
+            <answer id="a" correct="no">Capcom</answer>
+            <answer id="b" correct="no">Square Enix</answer>
+            <answer id="c" correct="yes">FromSoftware</answer>
+            <answer id="d" correct="no">Konami</answer>
+        </answers>
+        <points>2</points>
+    </question>
+
+    <question id="q24">
+        <text>In chess, how many squares can a knight move in a single turn?</text>
+        <answers>
+            <answer id="a" correct="no">1</answer>
+            <answer id="b" correct="no">2</answer>
+            <answer id="c" correct="yes">Up to 3</answer>
+            <answer id="d" correct="no">Unlimited diagonal</answer>
+        </answers>
+        <points>2</points>
+    </question>
+
+    <question id="q25">
+        <text>Which battle-royale-game features a character named "Master Chief"?</text>
+        <answers>
+            <answer id="a" correct="no">Fortnite</answer>
+            <answer id="b" correct="no">Apex Legends</answer>
+            <answer id="c" correct="no">Call of Duty: Warzone</answer>
+            <answer id="d" correct="yes">None</answer>
+        </answers>
+        <points>3</points>
+    </question>
+</category>
+
+    <category name = "Sports">
+        <question id="q26">
+            <text>How many players are on a standard football (soccer) team on the field?</text>
+            <answers>
+                <answer id="a" correct="no">9</answer>
+                <answer id="b" correct="no">10</answer>
+                <answer id="c" correct="yes">11</answer>
+                <answer id="d" correct="no">12</answer>
+            </answers>
+            <points>1</points>
+        </question>
+
+        <question id="q27">
+            <text>In which country were the 2016 Summer Olympics held?</text>
+            <answers>
+                <answer id="a" correct="no">China</answer>
+                <answer id="b" correct="yes">Brazil</answer>
+                <answer id="c" correct="no">Argentina</answer>
+                <answer id="d" correct="no">South Africa</answer>
+            </answers>
+            <points>1</points>
+        </question>
+
+        <question id="q28">
+            <text>In tennis, what is the term for a score of 40-40?</text>
+            <answers>
+                <answer id="a" correct="no">Tiebreak</answer>
+                <answer id="b" correct="no">Match point</answer>
+                <answer id="c" correct="no">Advantage</answer>
+                <answer id="d" correct="yes">Deuce</answer>
+            </answers>
+            <points>2</points>
+        </question>
+
+        <question id="q29">
+            <text>Which country has won the most FIFA World Cup titles?</text>
+            <answers>
+                <answer id="a" correct="no">Germany</answer>
+                <answer id="b" correct="no">Argentina</answer>
+                <answer id="c" correct="yes">Brazil</answer>
+                <answer id="d" correct="no">Italy</answer>
+            </answers>
+            <points>1</points>
+        </question>
+
+        <question id="q30">
+            <text>In basketball, how many points is a shot worth if taken from beyond the arc?</text>
+            <answers>
+                <answer id="a" correct="no">1</answer>
+                <answer id="b" correct="no">2</answer>
+                <answer id="c" correct="yes">3</answer>
+                <answer id="d" correct="no">4</answer>
+            </answers>
+            <points>1</points>
+        </question>
+    </category>
+
+</quiz>
