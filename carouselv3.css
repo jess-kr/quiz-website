@@ -1,0 +1,301 @@
+/* ── Track ── */
+ul {
+    --track-pad: var(--small-padding);  /* single source of truth for card sizing */
+
+    width: 100%;
+    height: calc(100vh - var(--nav-h) - var(--footer-h) - var(--track-pad) * 2 - 28px);
+
+    display: flex;
+    flex-direction: row;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    padding: var(--track-pad) var(--track-pad) 0;
+    gap: var(--track-pad);
+    align-items: stretch;
+    list-style: none;
+}
+
+ul::-webkit-scrollbar {
+    display: none;
+}
+
+/* ── Scroll markers (dot indicators) ── */
+ul {
+    scroll-marker-group: before;
+}
+
+ul::scroll-marker-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 28px;
+    padding: 0;
+    margin-bottom: calc(100vh -var(--nav-h)- var((--small-padding) / 2));
+}
+
+li::scroll-marker {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--text);
+    background: transparent;
+    transition: background 0.2s, transform 0.2s;
+}
+
+li::scroll-marker:target-current {
+    background: var(--text);
+    transform: scale(1.3);
+}
+
+/* ── Scroll buttons (prev / next arrows) ── */
+ul::scroll-button(left) {
+    content: "◄" / "Previous";
+    font-size: 1.25rem;
+    background: none;
+    border: none;
+    color: var(--text);
+    opacity: 0.5;
+    cursor: pointer;
+    padding: 4px 8px;
+    transition: opacity 0.2s;
+}
+
+ul::scroll-button(right) {
+    content: "►" / "Next";
+    font-size: 1.25rem;
+    background: none;
+    border: none;
+    color: var(--text);
+    opacity: 0.5;
+    cursor: pointer;
+    padding: 4px 8px;
+    transition: opacity 0.2s;
+}
+
+ul::scroll-button(*):hover,
+ul::scroll-button(*):focus {
+    opacity: 1;
+}
+
+ul::scroll-button(*):active {
+    translate: 1px 1px;
+}
+
+ul::scroll-button(*):disabled {
+    opacity: 0.15;
+    cursor: unset;
+}
+
+/* ── Cards ── */
+li {
+    flex: 0 0 calc(100% - var(--track-pad) * 2);
+    scroll-snap-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--small-padding);
+
+    list-style: none;
+    background-image: var(--player-background);
+    color: var(--player-card-text);
+    border: 1px solid #dddddd;
+    border-radius: 32px;
+    padding: calc(var(--small-padding) * 2) var(--small-padding);
+}
+
+.playerText {
+    position: relative;
+    top: anchor(top);
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: auto;
+}
+
+li img {
+    width: auto;
+    max-width: 60%;
+    max-height: 36vh;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+li h2 {
+    margin: 0;
+    color: var(--player-card-text);
+    font-size: 2rem;
+    text-align: center;
+}
+
+li p {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    text-align: center;
+    color: var(--player-card-text);
+    opacity: 0.75;
+    max-width: 36ch;
+    margin: 0;
+}
+
+/* ── Choose button ── */
+.choose-btn {
+    margin-top: auto;
+    background-color: var(--blue);
+    color: var(--text-light);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 10px 32px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.choose-btn:hover {
+    background-color: var(--light-blue);
+    color: var(--text-dark);
+    text-decoration: underline;
+}
+
+/* ── Landscape phone ── */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    ul {
+        --track-pad: calc(var(--small-padding) / 2);
+        height: calc(100vh - var(--nav-h) - var(--footer-h) - var(--track-pad) * 3 - 50px);
+    }
+
+    li {
+        flex: 0 0 calc(100% - var(--track-pad) * 2);
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: calc(var(--small-padding) * 1.5);
+        padding: var(--small-padding) calc(var(--small-padding) * 1.5);
+    }
+
+    li img {
+        max-height: 70vh;
+        max-width: 28%;
+    }
+
+    li h2 {
+        font-size: 1.4rem;
+    }
+
+    li p {
+        font-size: 0.8rem;
+    }
+
+    .choose-btn {
+        margin-top: 0;
+    }
+}
+
+/* ── Tablet ── */
+@media screen and (max-width: 768px) {
+    li h2 {
+        font-size: 1.75rem;
+    }
+
+    li img {
+        max-height: 30vh;
+    }
+}
+
+/* ── Mobile ── */
+@media screen and (max-width: 480px) {
+    ul::scroll-button(*) {
+        display: none;
+    }
+
+    ul {
+        --track-pad: 8px;
+    }
+
+    li {
+        flex: 0 0 calc(100% - var(--track-pad) * 2);
+        border-radius: 24px;
+        padding: calc(var(--small-padding) * 2) var(--small-padding);
+        gap: var(--small-padding);
+    }
+
+    li img {
+        max-height: 26vh;
+        max-width: 70%;
+    }
+
+    li h2 {
+        font-size: 1.4rem;
+    }
+
+    li p {
+        font-size: 0.85rem;
+    }
+}
+
+/* ── Small phone ── */
+@media screen and (max-width: 320px) {
+    li img {
+        width: 70vw;
+        height: auto;
+    }
+
+    li h2 {
+        font-size: 1.2rem;
+    }
+}
+
+/* ── Short viewport, wide screen (e.g. landscape laptop) ── */
+@media screen and (min-width: 769px) and (max-height: 763px) {
+    ul {
+        --track-pad: calc(var(--small-padding) / 2);
+        height: calc(100vh - var(--nav-h) - var(--footer-h) - var(--track-pad) * 2 - 28px);
+    }
+
+    li {
+        flex: 0 0 calc(100% - var(--track-pad) * 2);
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: calc(var(--small-padding) * 1.5);
+        padding: var(--small-padding) calc(var(--small-padding) * 1.5);
+    }
+
+    li img {
+        max-height: 60vh;
+        max-width: 28%;
+    }
+
+    li h2 {
+        font-size: 1.5rem;
+        position: static;
+    }
+
+    li p {
+        font-size: 0.85rem;
+    }
+
+    .choose-btn {
+        margin-top: 0;
+    }
+}
+
+/* ── Very short viewport ── */
+@media screen and (max-height: 400px) {
+    li h2 {
+        position: static;
+    }
+}

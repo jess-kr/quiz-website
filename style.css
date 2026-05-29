@@ -12,15 +12,19 @@
     --text: #252422;
     --text-light: #fcf8f0;
     --text-dark: #252422;
+    --player-card-text:#fcf8f0;
 
     --fancy-font: "Copperplate Gothic";
     --font-sans: "Arial";
     --background: url("media/background_light.png");
+    --player-background: url("media/player_bg_dark.png");
 
     --nav-h: 68px;
     --section-padding: 100px;
     --small-padding: 30px;
+    --footer-h: 68px;
 }
+
 
 
 
@@ -42,6 +46,8 @@ body.darkMode {
     --terracotta: #3a1f12;
     --text: #fcf8f0;
     --background: url("media/background_dark.png");
+    --player-background: url("media/player_bg_light.png");
+    --player-card-text: #252422;
 }
 
 header {
@@ -105,13 +111,12 @@ button {
     padding: 8px 16px;
     border-radius: 40px;
     transition: background 0.2s, color 0.2s;
-    position: relative;
 }
 
 button:hover {
     background-color: var(--light-blue);
     color: var(--text-dark);
-    font-weight: bold;
+    text-decoration: underline;
 }
 
 
@@ -122,13 +127,12 @@ footer {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     width: 100%;
+    height: var(--footer-h);
     font-family: var(--font-sans);
 }
-
-
 
 .site-footer {
     background: var(--terracotta);
@@ -283,6 +287,7 @@ footer {
     align-items: center;
     justify-content: center;
     margin: calc( var(--small-padding)/2);
+    margin-top: var(--small-padding);
     color: var(--text);
     max-height: 10vh;
     gap: var(--small-padding);
@@ -297,6 +302,7 @@ footer {
 }
 
 .playerDisplay{
+    margin-top: calc(var(--small-padding)/2);
     margin-left: auto;
     margin-right: var(--small-padding);
     background-color: (var(--terracotta));
@@ -493,7 +499,7 @@ footer {
 
 @media (max-width: 480px) {
   footer {
-    position: static;
+    display: block;
     margin-top: var(--small-padding);
   }
 }
