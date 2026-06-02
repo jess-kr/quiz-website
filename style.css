@@ -400,7 +400,6 @@ footer {
 
 /* responsive quiz-layout */
 @media screen and (max-width: 768px) {
-
   .answerGrid {
     grid-template-columns: 1fr;
     gap: calc(var(--small-padding)/4);
