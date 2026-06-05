@@ -84,9 +84,11 @@ nav a {
     position: relative;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:active  {
     background-color: var(--light-blue);
     color: var(--text-dark);
+    transform: scale(0.96);
 }
 
 h1 {
@@ -113,10 +115,12 @@ button {
     transition: background 0.2s, color 0.2s;
 }
 
-button:hover {
+button:hover,
+button:active {
     background-color: var(--light-blue);
     color: var(--text-dark);
     text-decoration: underline;
+    transform: scale(0.96);
 }
 
 
@@ -152,11 +156,13 @@ footer {
     position: relative;
 }
 
-.site-footer button:hover {
+.site-footer button:hover,
+.site-footer button:active {
    background-color: var(--light-blue);
     color: var(--text-dark);
     font-weight: bold;
     cursor: pointer;
+    transform: scale(0.96);
 }
 
 
@@ -173,11 +179,13 @@ footer {
     position: relative;
 }
 
-#dark-mode-toggle:hover{
+#dark-mode-toggle:hover,
+#dark-mode-toggle:active{
     background-color: var(--light-blue);
     color: var(--text-dark);
     font-weight: bold;
     cursor: pointer;
+    transform: scale(0.96);
 }
 
 /* StartPage Specific */
@@ -225,12 +233,13 @@ footer {
     position: relative;
 }
 
-.startButton:hover{
+.startButton:hover,
+.startButton:active{
     background-color: var(--light-blue);
     color: var(--text-dark);
     font-weight: bold;
     cursor: pointer;
-
+    transform: scale(0.96);
 }
 
 /* Quiz-Page Specific*/
@@ -279,12 +288,14 @@ footer {
     transition: background 0.2s, border-color 0.2s;
 }
 
-.answer:hover {
+.answer:hover,
+.answer:active {
     background-color: var(--blue);
     text-decoration: underline;
     color: var(--text-light);
     cursor: pointer;
     transition: background 0.2s, border-color 0.2s;
+    transform: scale(0.96);
 }
 
 .headRow {
@@ -425,9 +436,11 @@ footer {
     cursor: pointer;
 }
 
-#restartButton:hover{
+#restartButton:hover,
+#restartButton:active{
     background-color: var(--light-blue);
     color: var(--text-dark);
+    transform: scale(0.96);
 }
 
 /* M E D I A   Q U E R I E S */
