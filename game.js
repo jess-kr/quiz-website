@@ -8,6 +8,7 @@ let player;
 const soundCorrect = new Audio("media/audio/rightanswer.mp3");
 const soundWrong   = new Audio("media/audio/wronganswer.mp3");
 const gameOverSound = new Audio("media/audio/gameover.mp3");
+const winSound = new Audio("media/audio/win.mp3");
 
 async function startQuiz() {
     score = 0;
@@ -128,6 +129,8 @@ function displayDone() {
             <button id = "restartButton" onclick="startQuiz()"> Play again? </button>
         </div>
     `;
+    winSound.currentTime = 0;
+    winSound.play();
     launchConfetti();
 }
 
