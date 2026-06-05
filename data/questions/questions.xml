@@ -198,7 +198,7 @@
         <text>On what planet does Luke Skywalker meet Obi Wan?</text>
         <answers>
             <answer id="a" correct="no">Coruscant</answer>
-            <answer id="b" correct="yes">Tattooine</answer>
+            <answer id="b" correct="yes">Tatooine</answer>
             <answer id="c" correct="no">Lolth</answer>
             <answer id="d" correct="no">Naboo</answer>
         </answers>

@@ -5,6 +5,10 @@ let questions = [];
 let gameOver = false;
 let player;
 
+const soundCorrect = new Audio("media/audio/rightanswer.mp3");
+const soundWrong   = new Audio("media/audio/wronganswer.mp3");
+const gameOverSound = new Audio("media/audio/gameover.mp3");
+
 async function startQuiz() {
     score = 0;
     lives = 3;
@@ -51,6 +55,8 @@ function showQuestion() {
 
         if (a.getAttribute("correct") === "yes") {
             div.onclick = () => {
+                soundCorrect.currentTime = 0;
+                soundCorrect.play();
                 updateScore(Number(q.querySelector("points").textContent));
                 current++;
                 showQuestion();
@@ -58,6 +64,8 @@ function showQuestion() {
         }
         else {
             div.onclick = () => {
+                soundWrong.currentTime = 0;
+                soundWrong.play(); 
                 updateLives(-1);
                 if (gameOver) return;
                 current++;
@@ -83,9 +91,11 @@ function updateLives(num) {
 
 function setGameOver() {
     gameOver = true;
+    gameOverSound.currentTime = 0;
+    gameOverSound.play();
     score = 0;
     const container = document.getElementById("quiz");
-    container.innerHTML = '<h1> Game Over!</h1><br> <button onclick="startQuiz()"> Brave enough to try again? </button>'
+    container.innerHTML = '<div id = "gameOverBox"><h1> Game Over!</h1><br> <button id = "gameOverButton" onclick="startQuiz()"> Brave enough to try again? </button></div>'
 }
 
 function showCurrentPlayer() {
