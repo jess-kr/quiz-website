@@ -187,11 +187,15 @@ footer {
     align-items: center;
     flex-direction: column;
     gap: var(--small-padding);
+    padding: var(--small-padding);
+    padding-bottom: calc(var(--footer-h) + var(--small-padding));
+    min-height: calc(100vh - var(--nav-h) - var(--footer-h));
 }
 
 .startHeader {
     margin: var(--small-padding);
     color: var(--text);
+    text-align: center;
 }
 
 .photoBox {
@@ -204,6 +208,8 @@ footer {
 .photoBox img {
     width: 30%;
     border-radius: 40px;
+    min-width: 180px;
+    max-width: 340px;
 }
 
 .startButton {
@@ -428,9 +434,16 @@ footer {
 
 /* responsive quiz-layout */
 @media screen and (max-width: 768px) {
+
   .answerGrid {
     grid-template-columns: 1fr;
     gap: calc(var(--small-padding)/4);
+  }
+
+    .answer {
+    padding: 16px;                       
+    margin: 10px;                        
+    font-size: 1rem;
   }
 
   .headRow {
@@ -455,70 +468,115 @@ footer {
     width: 80%;
     margin: var(--small-padding);
 }
+
+  #questionHeader {
+    font-size: 1.2rem;
+  }
 }
 
 /* change some padding variables for smaller screens */
 @media screen and (max-width: 480px) {
   :root {
-    --section-padding: 40px;
-    --small-padding: 16px;
+    --section-padding: 30px;
+    --small-padding: 14px;
   }
-
-  .headRow{
+ 
+  /* -- start page -- */
+  .startPageBox {
+    gap: 12px;
+  }
+ 
+  .startHeader h1 {
+    font-size: 1.3rem;
+  }
+ 
+  .photoBox img {
+    width: 55vw;
+    min-width: unset;
+    border-radius: 24px;
+  }
+ 
+  .startButton {
+    width: 80vw;
+    font-size: 1rem;
+    text-align: center;
+  }
+ 
+  /* -- nav -- */
+  nav a {
+    padding: 6px 10px;
+    font-size: 0.78rem;
+  }
+ 
+  /* -- quiz head row -- */
+  .headRow {
     display: flex;
     flex-wrap: nowrap;
     max-height: none;
-    margin: calc( var(--small-padding)/2);
-    color: var(--text);
-    max-height: 10vh;
+    margin: calc(var(--small-padding)/2);
     gap: calc(var(--small-padding)/2);
   }
-
-  .playerDisplay{
+ 
+  .playerDisplay {
     flex-shrink: 0;
-    margin-left: auto; 
-    margin-left: calc(var(--small-padding)/2);
+    margin-left: auto;
     margin-right: calc(var(--small-padding)/2);
   }
-
+ 
   .headRow-item {
     margin-top: calc(var(--small-padding)/2);
     flex-shrink: 1;
     min-width: 0;
-}
-
- #score, #category, #lives {
-    padding: 8px 10px;
-    font-size: 0.75rem;
+  }
+ 
+  #score, #category, #lives {
+    padding: 7px 10px;
+    font-size: 0.78rem;
     white-space: nowrap;
   }
-  
-
-  .startButton {
-    width: 80vw;
-    font-size: 1.2rem;
-  }
-
+ 
+  /* -- quiz question & answers -- */
   #questionHeader {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: var(--small-padding);
+    border-radius: 24px;
   }
-
+ 
+  .answerGrid {
+    gap: 8px;
+    margin: 8px var(--small-padding);
+  }
+ 
   .answer {
-    padding: 14px;
-    margin: 10px;
+    padding: 14px 10px;
+    margin: 4px 0;
+    border-radius: 24px;
+    font-size: 0.95rem;
   }
-
-  nav a {
-    padding: 6px 10px;
-    font-size: 0.8rem;
+ 
+  /* -- end screens -- */
+  #quizDoneHeader,
+  #endScoreDisplay {
+    font-size: 1.1rem;
   }
 }
 
 
 @media (max-width: 380px) {
-  #category {
+   #category {
     display: none;
+  }
+ 
+  .photoBox img {
+    width: 70vw;
+  }
+ 
+  #questionHeader {
+    font-size: 0.95rem;
+  }
+ 
+  .answer {
+    font-size: 0.88rem;
   }
 }
 
