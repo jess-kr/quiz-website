@@ -405,7 +405,7 @@ footer {
     gap: var(--small-padding);
 }
 
-#gameOverButton{
+#restartButton{
     background-color: var(--blue);
     font-size: 1.1rem;
     font-weight: 400;
@@ -416,6 +416,12 @@ footer {
     border-radius: 40px;
     transition: background 0.2s, color 0.2s;
     position: relative;
+    cursor: pointer;
+}
+
+#restartButton:hover{
+    background-color: var(--light-blue);
+    color: var(--text-dark);
 }
 
 /* M E D I A   Q U E R I E S */
