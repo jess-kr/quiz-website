@@ -227,12 +227,12 @@ li p {
     }
 
     ul::scroll-marker-group{
-        padding-top: 80px;
+        padding-top: 50px;
     }
 
     ul {
         --track-pad: 10px;
-        margin-top: var(--section-padding);
+        margin-top: var(--small-padding);
         height: 80dvh;
         padding-bottom: 0;
     }
