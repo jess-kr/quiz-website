@@ -16,3 +16,11 @@ darkBtn.addEventListener('click', () => {
   localStorage.setItem('darkMode', isDark());
   updateBtn();
 });
+
+const toggle = document.getElementById('hamburger-toggle');
+const nav = document.getElementById('hamburger-nav');
+
+toggle.addEventListener('click', () => {
+  const isOpen = nav.classList.toggle('open');
+  toggle.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+});

@@ -10,88 +10,83 @@
 </head>
 
 <body>
-    
+
     <header>
-        <nav>
+        <button id="hamburger-toggle" aria-label="Open menu">&#9776;</button>
+        <nav id="hamburger-nav">
             <a id="dark-mode-toggle"></a>
             <a href="index.html">Back to Start</a>
         </nav>
     </header>
 
-<main>
-    <ul class="player-carousel">
-        <li data-accName="Dr_Duck">
-            <div class="playerText">
-                <h2> Doctor Duck </h2>
-                <p> He has a degree, I swear.</p>
-            </div>
-            <img src="media/players/drduck.jpeg" alt="A picture of a Duck">
-            <button class="choose-btn" onclick="setPlayer(this)">Choose</button>
-        </li>
+    <main>
+        <ul class="player-carousel">
+            <li data-accName="Dr_Duck">
+                <div class="playerText">
+                    <h2> Doctor Duck </h2>
+                    <p> He has a degree, I swear.</p>
+                </div>
+                <img src="media/players/drduck.jpeg" alt="A picture of a Duck">
+                <button class="choose-btn" onclick="setPlayer(this)">Choose</button>
+            </li>
 
-        <li data-accName="Mr_SmartyPants">
-            <div class="playerText">
-                <h2> Mr. Smarty-Pants </h2>
-                <p> He has probably had at least one thought.</p>
-            </div>
-            <img src="media/players/mrsmartypants.jpeg" alt="A Cute Cat-Picture">
-            <button class="choose-btn" onclick="setPlayer(this)">Choose</button>
-        </li>
+            <li data-accName="Mr_SmartyPants">
+                <div class="playerText">
+                    <h2> Mr. Smarty-Pants </h2>
+                    <p> He has probably had at least one thought.</p>
+                </div>
+                <img src="media/players/mrsmartypants.jpeg" alt="A Cute Cat-Picture">
+                <button class="choose-btn" onclick="setPlayer(this)">Choose</button>
+            </li>
 
-        <li data-accName="Fairy_of_IQ">
-            <div class="playerText">
-                <h2> Fairy of IQ </h2>
-                <p> I mean, she's magical. What more do you want?</p>
-            </div>
-            <img src="media/players/fairyofiq.jpeg" alt="A Pixelart Fairy">
-            <button class="choose-btn" onclick="setPlayer(this)">Choose</button>
-        </li>
+            <li data-accName="Fairy_of_IQ">
+                <div class="playerText">
+                    <h2> Fairy of IQ </h2>
+                    <p> I mean, she's magical. What more do you want?</p>
+                </div>
+                <img src="media/players/fairyofiq.jpeg" alt="A Pixelart Fairy">
+                <button class="choose-btn" onclick="setPlayer(this)">Choose</button>
+            </li>
 
-        <li data-accName="Froggy">
-            <div class="playerText">
-                <h2> Froggy </h2>
-                <p> He's just happy to be here.</p>
-            </div>
-            <img src="media/players/froggy.jpeg" alt="A Frog with blushed cheeks">
-            <button class="choose-btn" onclick="setPlayer(this)">Choose</button>
-        </li>
+            <li data-accName="Froggy">
+                <div class="playerText">
+                    <h2> Froggy </h2>
+                    <p> He's just happy to be here.</p>
+                </div>
+                <img src="media/players/froggy.jpeg" alt="A Frog with blushed cheeks">
+                <button class="choose-btn" onclick="setPlayer(this)">Choose</button>
+            </li>
 
-        <li data-accName="Slayer_of_AI">
-            <div class="playerText">
-                <h2> Slayer of AI </h2>
-                <p> He has never once promted anything. He just... knows stuff, I guess.</p>
-            </div>
-            <img src="media/players/slayerofai.jpeg" alt="A Knight that hates AI">
-            <button class="choose-btn" onclick="setPlayer(this)">Choose</button>
-        </li>
+            <li data-accName="Slayer_of_AI">
+                <div class="playerText">
+                    <h2> Slayer of AI </h2>
+                    <p> He has never once promted anything. He just... knows stuff, I guess.</p>
+                </div>
+                <img src="media/players/slayerofai.jpeg" alt="A Knight that hates AI">
+                <button class="choose-btn" onclick="setPlayer(this)">Choose</button>
+            </li>
 
-        <li data-accName="Hoarder_of_Knowledge">
-            <div class="playerText">
-                <h2> Hoarder of Knowledge</h2>
-                <p> He is thousands of years old and even remembers phone-books.</p>
-            </div>
-            <img src="media/players/hoarderofknowledge.jpeg" alt="A Dragon, hovering in clouds">
-            <button class="choose-btn" onclick="setPlayer(this)">Choose</button>
-        </li>
+            <li data-accName="Hoarder_of_Knowledge">
+                <div class="playerText">
+                    <h2> Hoarder of Knowledge</h2>
+                    <p> He is thousands of years old and even remembers phone-books.</p>
+                </div>
+                <img src="media/players/hoarderofknowledge.jpeg" alt="A Dragon, hovering in clouds">
+                <button class="choose-btn" onclick="setPlayer(this)">Choose</button>
+            </li>
 
-        <li data-accName="Pidgeon">
-            <div class="playerText">
-                <h2>Pidgeon</h2>
-                <p> Just a pidgeon. But it's cute, right?</p>
-            </div>
-            <img src="media/players/pidgeon.jpeg" alt="just a pidgeon">
-            <button class="choose-btn" onclick="setPlayer(this)">Choose</button>
-        </li>
-    </ul>
+            <li data-accName="Pidgeon">
+                <div class="playerText">
+                    <h2>Pidgeon</h2>
+                    <p> Just a pidgeon. But it's cute, right?</p>
+                </div>
+                <img src="media/players/pidgeon.jpeg" alt="just a pidgeon">
+                <button class="choose-btn" onclick="setPlayer(this)">Choose</button>
+            </li>
+        </ul>
     </main>
 
-    <footer class="site-footer">
-        Issues? 
-        Report them via my GitHub-Website!
-        <a href="https://jess-kr.github.io/website/#contact"><button>Report</button></a>
-    </footer>
-
-    <script src="darkmode.js"></script>
+    <script src="darkmode_hamburger.js"></script>
     <script src="player.js"></script>
 </body>
 

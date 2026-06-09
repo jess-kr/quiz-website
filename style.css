@@ -49,30 +49,56 @@ body.darkMode {
     --player-background: url("media/player_bg_light.png");
     --player-card-text: #252422;
 }
-
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: var(--small-padding);
     height: var(--nav-h);
     background: var(--terracotta);
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-
-nav {
-    height: var(--nav-h);
     width: 100%;
-    display: flex;
-    gap: 12px;
-    align-items: center;
+    box-sizing: border-box;
 }
 
-nav a {
+#hamburger-toggle {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#hamburger-toggle:hover {
+    opacity: 0.8;
+}
+
+#hamburger-nav {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: var(--terracotta);
+    padding: 0 var(--small-padding);
+    box-sizing: border-box;
+    position: fixed;
+    top: var(--nav-h);
+    left: 0;
+    width: 100%;
+}
+
+#hamburger-nav.open {
+    max-height: 300px;
+    padding: 12px var(--small-padding);
+}
+
+#hamburger-nav a {
     background-color: var(--blue);
     font-family: var(--font-sans);
     font-size: 0.8rem;
@@ -82,10 +108,13 @@ nav a {
     border-radius: 50px;
     transition: background 0.2s, color 0.2s;
     position: relative;
+    text-decoration: none;
+    /* limit link width so it doesn't stretch full-width */
+    align-self: flex-start;
 }
 
-nav a:hover,
-nav a:active  {
+#hamburger-nav a:hover,
+#hamburger-nav a:active {
     background-color: var(--light-blue);
     color: var(--text-dark);
     transform: scale(0.96);
@@ -124,48 +153,6 @@ button:active {
 }
 
 
-
-footer {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-    height: var(--footer-h);
-    font-family: var(--font-sans);
-}
-
-.site-footer {
-    background: var(--terracotta);
-    color: var(--text-light);
-    padding: calc(var(--small-padding)/1.7);
-    padding-bottom: calc(var(--small-padding)/3);
-}
-
-.site-footer button{
-    background-color: var(--blue);
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: var(--text-light);
-    padding: 6px 12px;
-    border-radius: 40px;
-    transition: background 0.2s, color 0.2s;
-    position: relative;
-}
-
-.site-footer button:hover,
-.site-footer button:active {
-   background-color: var(--light-blue);
-    color: var(--text-dark);
-    font-weight: bold;
-    cursor: pointer;
-    transform: scale(0.96);
-}
-
-
 #dark-mode-toggle{
     background-color: var(--blue);
     font-size: 0.8rem;
@@ -183,7 +170,6 @@ footer {
 #dark-mode-toggle:active{
     background-color: var(--light-blue);
     color: var(--text-dark);
-    font-weight: bold;
     cursor: pointer;
     transform: scale(0.96);
 }
