@@ -362,6 +362,7 @@ button:active {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 #progressBar {
     width: 100%;
@@ -572,9 +573,7 @@ button:active {
 
 
 @media (max-width: 380px) {
-   #category {
-    display: none;
-  }
+
  
   .photoBox img {
     width: 70vw;
