@@ -38,7 +38,7 @@ ul::scroll-marker-group {
     align-items: center;
     gap: 10px;
     height: 28px;
-    margin-top: var(--small-padding);
+    margin-top: var(--section-padding);
     margin-bottom: calc(100vh - var(--nav-h) - var((--small-padding) / 2));
 }
 
@@ -112,6 +112,7 @@ li {
     color: var(--player-card-text);
     border: 1px solid #dddddd;
     border-radius: 32px;
+    margin-top: var (--small-padding);
     padding: calc(var(--small-padding) * 2) var(--small-padding);
     overflow: hidden;
 }
@@ -219,13 +220,14 @@ li p {
 
 /* ── Mobile ── */
 @media screen and (max-width: 480px) {
-    ul::scroll-button(*) {
+    ul::scroll-marker-group {
         display: none;
     }
 
     ul {
         --track-pad: 10px;
-        height: calc(100dvh - var(--nav-h) - var(--footer-h) - var(--track-pad) * 3 - 28px);
+        padding-top: var(--section-padding);
+        height: calc(100dvh - var(--nav-h) - var(--track-pad) * 3);
         padding-bottom: 0;
     }
 
@@ -233,6 +235,7 @@ li p {
         flex: 0 0 calc(100% - var(--track-pad) * 2);
         border-radius: 24px;
         padding: var(--small-padding) var(--small-padding);
+        margin-top: var(--section-padding);
         gap: var(--small-padding);
     }
 
@@ -259,6 +262,7 @@ li p {
 
 /* ── Small phone ── */
 @media screen and (max-width: 320px) {
+    
     li img {
         max-width: 70vw;
         max-height: 22vh;
