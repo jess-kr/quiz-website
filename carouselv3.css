@@ -176,6 +176,7 @@ li p {
 
 /* ── Landscape phone ── */
 @media screen and (orientation: landscape) and (max-height: 500px) {
+
     ul {
         --track-pad: calc(var(--small-padding) / 2);
         height: calc(100dvh - var(--nav-h) - var(--footer-h) - var(--track-pad) * 3 - 50px);

@@ -237,6 +237,7 @@ button:active {
 
 #quizBox{
     padding: var(--small-padding);
+    margin: calc( var(--small-padding)/2);
 }
 
 #quiz {
