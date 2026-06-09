@@ -111,7 +111,6 @@ header {
     transition: background 0.2s, color 0.2s;
     position: relative;
     text-decoration: none;
-    /* limit link width so it doesn't stretch full-width */
     align-self: flex-start;
 }
 
@@ -119,7 +118,6 @@ header {
 #hamburger-nav a:active {
     background-color: var(--light-blue);
     color: var(--text-dark);
-    transform: scale(0.96);
 }
 
 h1 {
@@ -573,7 +571,7 @@ button:active {
 
 
 @media (max-width: 380px) {
-
+ 
  
   .photoBox img {
     width: 70vw;
