@@ -7,6 +7,7 @@
 :root {
     --blue: #2325a0;
     --terracotta: #8d4c2e;
+    --light-terracotta: #bd7b5d;
     --light-blue: #8385ec;
 
     --text: #252422;
@@ -78,13 +79,14 @@ header {
 }
 
 #hamburger-nav {
+    z-index: 999;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 8px;
-    background: var(--terracotta);
+    background: white;
     padding: 0 var(--small-padding);
     box-sizing: border-box;
     position: fixed;

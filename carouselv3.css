@@ -33,6 +33,7 @@ ul {
 }
 
 ul::scroll-marker-group {
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -220,14 +221,19 @@ li p {
 
 /* ── Mobile ── */
 @media screen and (max-width: 480px) {
-    ul::scroll-marker-group {
+    ul::scroll-button(left),
+    ul::scroll-button(right) {
         display: none;
+    }
+
+    ul::scroll-marker-group{
+        padding-top: 80px;
     }
 
     ul {
         --track-pad: 10px;
-        padding-top: var(--section-padding);
-        height: calc(100dvh - var(--nav-h) - var(--track-pad) * 3);
+        margin-top: var(--section-padding);
+        height: 80dvh;
         padding-bottom: 0;
     }
 
