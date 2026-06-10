@@ -257,7 +257,6 @@ button:active {
     text-align: center;
     color: var(--text-light);
     padding: var(--small-padding);
-    margin: var(--small-padding);
 }
 
 .answerGrid {
@@ -308,11 +307,10 @@ button:active {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
 .playerDisplay{
-    margin-top: calc(var(--small-padding)/2);
+    margin-top: calc( var(--small-padding)/2);
     margin-left: auto;
     margin-right: var(--small-padding);
     background-color: (var(--terracotta));
@@ -361,6 +359,7 @@ button:active {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: calc( var(--small-padding)/2);
 }
 #progressBar {
     width: 100%;
@@ -465,7 +464,7 @@ button:active {
   .headRow {
     flex-wrap: nowrap;
     max-height: none;
-    gap: calc(var(--small-padding) / 2);
+    gap: var(--small-padding);
   }
 
   .headRow-item {
