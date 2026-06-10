@@ -95,8 +95,8 @@ function setGameOver() {
     gameOverSound.currentTime = 0;
     gameOverSound.play();
     score = 0;
-    const container = document.getElementById("quiz");
-    container.innerHTML = '<div id = "gameOverBox"><h1> Game Over!</h1><br> <button id = "restartButton" onclick="startQuiz()"> Brave enough to try again? </button></div>'
+    const container = document.getElementById("quizBox");
+    container.innerHTML = '<div id = "gameOverBox"><h1> Game Over!</h1><br> <img id = "gameovercat" src="media/gameovercat.jpeg" alt ="cute cat to make you feel better"><button id = "restartButton" onclick="restart()"> Brave enough to try again? </button></div>'
 }
 
 function showCurrentPlayer() {
@@ -126,12 +126,16 @@ function displayDone() {
         <div class="doneDisplay">
             <h3 id="quizDoneHeader">Quiz finished! Congratulations!</h3>
             <h3 id="endScoreDisplay">Your Score: ${score}</h3>
-            <button id = "restartButton" onclick="startQuiz()"> Play again? </button>
+            <button id = "restartButton" onclick="restart()"> Play again? </button>
         </div>
     `;
     winSound.currentTime = 0;
     winSound.play();
     launchConfetti();
+}
+
+function restart() {
+    window.location.href ="index.html";
 }
 
 function launchConfetti() {

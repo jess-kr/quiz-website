@@ -410,11 +410,19 @@ button:active {
 }
 
 #gameOverBox{
+    padding-top: var(--section-padding);
+    margin: var(--small-padding);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: var(--small-padding);
+}
+
+#gameovercat{
+    border-radius: 40px;
+    height: 40dvh;
+    width: auto;
 }
 
 #restartButton{
